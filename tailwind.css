@@ -1,0 +1,75 @@
+@import "docs/jost.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@screen print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    color: #343a40 !important;
+  }
+
+  .page {
+    padding: theme(spacing.16) theme(spacing.16) !important;
+  }
+
+  .initial {
+    color: transparent !important;
+    text-shadow: 0 0 0 #fff !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    color: #343a40 !important;
+  }
+
+  html {
+    font-size: 11px !important;
+  }
+}
+
+html {
+  font-size: 11px;
+}
+
+
+@screen sm {
+  html {
+    font-size: calc(11px + (16 - 11) * (100vw - 640px) / (833 - 640));
+  }
+}
+
+@screen md {
+  html {
+    font-size: calc(11px + (16 - 11) * (100vw - 833px) / (1079.5 - 833));
+  }
+}
+
+
+@screen lg {
+  html {
+    font-size: 16px;
+  }
+}
+
+.initials-container {
+  min-width: 2.31rem;
+}
+
+body .icon-parent::before {
+  content: "A";
+  width: 0;
+  visibility: hidden;
+  display: inline-block;
+}
+i:hover{
+  color: #343a40 !important;
+}

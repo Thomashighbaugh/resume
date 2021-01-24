@@ -1,11 +1,19 @@
 ## Universal Résumé Template
 
 ## Inspiration
-This was inspired by, and parts adapted from, WebPraktikos' `universal resume`, which tries harder to be supported across use cases so in case you need A4 sizing or anything else like that, I would check out his repo. 
+This was inspired by, and parts adapted from, WebPraktikos' `universal resume template`, which tries harder to be supported across use cases so in case you need A4 sizing or anything else like that, I would check out his repo. 
 
-## How to run it
+### Right to Copy or Adapt to Your Needs
+
+This is my personal resume, written out using `universal resume template` as a guide but constitutes a distinct work product from the original and is composed using styles and font-families that constitute my personal branding, so please change at least that much if you opt to adapt it yourself, other than that, have fun and good luck with finding your next job.
 
 <hr>
+
+## How to run it
+Clone the git repository 
+```
+git clone https://github.com/Thomashighbaugh/resume
+```
 
 Navigate to the base directory:
 
@@ -16,19 +24,19 @@ cd resume
 Install the dependencies:
 
 ```
-npm install
+yarn install
 ```
 
-Start the development server:
+Start the development server after building the stylesheet out of the Tailwind configuration:
 
 ```
-npm run serve
+yarn build && yarn serve
 ```
 
 Only generate CSS that is used on the page which results in a much smaller file size:
 
 ```
-npm run build
+yarn build
 ```
 
 <hr>
@@ -37,8 +45,7 @@ npm run build
 
 `docs/index.html` is the main content file. By copying HTML: add pages, sections, subsection, and other parts.
 
-`npm run build` will make the **docs** directory ready for drag-n-drop to, for example, https://app.netlify.com/drop (free registration required beforehand).
-
+`npm run build` enables drag and drop support of the `docs` directory, which you find helpful unloading your copy on GitHub if terminal/command prompt is not your thing. 
 
 <hr>
 

@@ -1,14 +1,14 @@
 {
-  "name": "universal-resume-template",
+  "name": "thomas-leon-highbaugh-resume",
   "version": "3.1.0",
-  "description": "Minimal and formal résumé (CV) website template for print, mobile, and desktop. https://bit.ly/ur_demo",
-  "homepage": "https://github.com/WebPraktikos/universal-resume",
+  "description": "A tasteful, professional resume written using HTML & Tailwind.css. Based on Universal Resume Template",
+  "homepage": "https://github.com/Thomashighbaugh/resume",
   "repository": {
     "type": "git",
-    "url": "https://github.com/WebPraktikos/universal-resume.git"
+    "url": "https://github.com/Thomashighbaugh/resume"
   },
   "bugs": {
-    "url": "https://github.com/WebPraktikos/universal-resume/issues"
+    "url": "https://github.com/Thomashighbaugh/resume/issues"
   },
   "license": "NonCommercial-ShareAlike 1.0 Generic",
   "author": "WebPraktikos <hi@webpraktikos.com>",

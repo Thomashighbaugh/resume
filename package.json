@@ -25,6 +25,6 @@
     "live-server": "1.2.1",
     "postcss-cli": "7.1.2",
     "postcss-import": "12.0.1",
-    "tailwindcss": "1.9.6"
+    "tailwindcss": "2.0.2"
   }
 }

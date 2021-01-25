@@ -17,7 +17,8 @@ module.exports = {
         jost: ["Jost", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        sm2: "0.675rem", // 15px label
+        sm2: "0.69rem", // 15px label
+        sm: "0.7rem",
         base: "0.75rem", // 16px base
         md: "1.0625rem", // 17px body
         lg: "1.125rem", // 18px heading

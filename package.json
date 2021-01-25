@@ -1,0 +1,31 @@
+{
+  "name": "thomas-leon-highbaugh-resume",
+  "version": "3.1.0",
+  "description": "A tasteful, professional resume written using HTML & Tailwind.css. Based on Universal Resume Template",
+  "homepage": "https://github.com/Thomashighbaugh/resume",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Thomashighbaugh/resume"
+  },
+  "bugs": {
+    "url": "https://github.com/Thomashighbaugh/resume/issues"
+  },
+  "license": "MIT",
+  "author": "Thomas Leon Highbaugh <thighbaugh@zoho.com>",
+  "scripts": {
+    "serve": "concurrently \"postcss ./tailwind.css -o docs/build.css --watch\"  \"live-server ./docs \"",
+    "build": "cross-env NODE_ENV=build postcss ./tailwind.css -o ./docs/build.css"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "4.0.0",
+    "autoprefixer": "10.2.3",
+    "concurrently": "5.3.0",
+    "cross-env": "7.0.3",
+    "cssnano": "4.1.10",
+    "live-server": "1.2.1",
+    "postcss": "^8.2.4",
+    "postcss-cli": "8.3.1",
+    "postcss-import": "12.0.1",
+    "tailwindcss": "1.9.6"
+  }
+}

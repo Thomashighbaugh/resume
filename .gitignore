@@ -2,5 +2,5 @@
 .vscode
 /node_modules/
 package-lock.json
-/docs/build.css
 /tmp/
+yarn.lock

@@ -18,8 +18,11 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: Render document
-        uses: markwilson/html2pdf@v1.0
+      - name: html to pdf
+        uses: misaelnieto/web_to_pdf_action@master
         with:
-          htmlPath: 'docs/index.html'
-          pdfName: 'thomasleonhighbaugh'
+          webPageURL: https://thomashighbaugh.github.io/resume/
+          outputFile: ./resume.pdf
+          usePuppeteer: true
+          useScreen: true
+          pdfOptions: '{"format": "Letter", "margin": {"top": "0", "left": "0", "right": "0", "bottom": "0"}}'

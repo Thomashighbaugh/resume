@@ -1,0 +1,6 @@
+- name: Convert HTML to PDF
+  uses: markwilson/html2pdf@v1.0
+  on:
+  push:
+    paths:
+    - 'docs/**'

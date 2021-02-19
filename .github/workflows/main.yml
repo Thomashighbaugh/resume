@@ -18,10 +18,14 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
+      - name: NPM
+        run: |
+          npm install
+          npm install puppeteer
       - name: html to pdf
         uses: misaelnieto/web_to_pdf_action@master
         with:
           webPageURL: https://thomashighbaugh.github.io/resume/
-          outputFile: https://thomashighbaugh.github.io/resume/resume.pdf
+          outputFile: resume.pdf
           usePuppeteer: true
           pdfOptions: '{"format": "Letter", "margin": {"top": "0", "left": "0", "right": "0", "bottom": "0"}}'

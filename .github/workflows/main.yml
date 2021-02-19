@@ -22,10 +22,8 @@ jobs:
         run: |
           npm install
           npm install puppeteer
-      - name: html to pdf
-        uses: misaelnieto/web_to_pdf_action@master
+      - name: PDF Generation
+        uses: markwilson/html2pdf@v1.0
         with:
-          webPageURL: https://thomashighbaugh.github.io/resume/
-          outputFile: resume.pdf
-          usePuppeteer: true
-          pdfOptions: '{"format": "Letter", "margin": {"top": "0", "left": "0", "right": "0", "bottom": "0"}}'
+          htmlPath: 'index.html'
+          pdfName: 'thomasleonhighbaugh'

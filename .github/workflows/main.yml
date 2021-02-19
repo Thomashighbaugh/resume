@@ -25,5 +25,4 @@ jobs:
       - name: PDF Generation
         uses: markwilson/html2pdf@v1.0
         with:
-          htmlPath: 'index.html'
           pdfName: 'thomasleonhighbaugh'

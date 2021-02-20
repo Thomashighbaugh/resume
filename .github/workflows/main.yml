@@ -1,28 +1,29 @@
-# This is a basic workflow to help you get started with Actions
-
-name: PDF
-
-# Controls when the action will run. 
+name: site-pdf
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - master
+    paths:
+      - "index.html"
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 jobs:
-  render_document:
+  build:
     runs-on: ubuntu-latest
+
+    name: Generate PDF
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-      - name: NPM
-        run: |
-          npm install
-          npm install puppeteer
-      - name: PDF Generation
-        uses: markwilson/html2pdf@v1.0
+      - uses: actions/checkout@v2.3.4
+
+      - name: Create "/pdf" directory
+        run: mkdir pdf && sudo chmod 777 pdf
+
+      - name: Build PDF
+        run: docker run --rm -t -v `pwd`:/pdf -v ~:/home/user Thomashighbaugh/resume resume/index.html pdf/thomas-leon-highbaugh.pdf
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          pdfName: 'thomasleonhighbaugh'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./pdf
+          publish_branch: pdf
+          keep_files: true

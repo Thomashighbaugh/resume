@@ -23,7 +23,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKE }}
           publish_dir: ./pdf
           publish_branch: pdf
           keep_files: true

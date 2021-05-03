@@ -11,7 +11,7 @@
   body {
     -webkit-print-color-adjust: exact !important;
     color-adjust: exact !important;
-    color: #343a40 !important;
+    color: #3c3f4c !important;
 
   }
 
@@ -58,7 +58,7 @@ html {
 
 @screen lg {
   html {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 
@@ -69,5 +69,5 @@ body .icon-parent::before {
   display: inline-block;
 }
 i:hover{
-  color: #343a40 !important;
+  color: #3c3f4c !important;
 }

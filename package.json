@@ -17,7 +17,7 @@
     "build": "cross-env NODE_ENV=build postcss ./tailwind.css -o ./docs/build.css"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "4.0.0",
+    "@fullhuman/postcss-purgecss": "4.0.3",
     "autoprefixer": "^10.2.5",
     "concurrently": "5.3.0",
     "cross-env": "7.0.3",

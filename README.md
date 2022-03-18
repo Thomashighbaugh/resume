@@ -1,6 +1,6 @@
 ## Universal Résumé Template
 
-## WHat This Is
+## What This Is
 
 This is the repository housing my personal resume, which I can conveniently host as a website because instead of writing it in Word (which I can't do as a Linux user) or Libreoffice (which sucks) or LaTex (which I have done, but is a bit of a pain and OverLeaf is a challenge itself) I opted to **write it out in HTML**. 
 

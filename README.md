@@ -84,7 +84,12 @@ Removing `col-fill-auto` class will make both columns equally tall. Moreover, re
 ### Chrome
 
 Right-click → Print.  
-Also, choose the **Save as PDF** option if needed.
+
+OR 
+
+You can save it as a PDF which will probably keep the SVG image and the other things being stripped out by the print optimizations, but there are use cases for that as well and its not like there really is a `right way` 
+
+------
 
 ### Firefox
 

@@ -2,6 +2,10 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
+  content:[
+"**/*.html",
+    "**/*.css"
+],
   theme: {
     /* For Letter size */
     screens: {
@@ -57,7 +61,7 @@ module.exports = {
         black: "#24262d",
         white: "#fdfdfd",
 
-        gray: {        
+        gray: {
           50: '#F9F9F9',
           100: '#E7E7E7',
           200: '#C4C4C4',

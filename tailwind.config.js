@@ -33,7 +33,7 @@ module.exports = {
         "5xl": "2.65rem",
       },
       lineHeight: {
-        snugish: "1.25",
+        snugish: "1.35",
         normal: "1.34",
       },
       maxWidth: {
@@ -58,7 +58,7 @@ module.exports = {
         transparent: "transparent",
         current: "currentColor",
 
-        black: "#24262d",
+        black: "#2c2c2c",
         white: "#fdfdfd",
 
         gray: {
@@ -74,7 +74,7 @@ module.exports = {
           900: '#1B1B1B',
           950: '#141414'
         },
-        link: "#b2bfd9",
+        link: "#969696",
       },
     },
   },
@@ -90,27 +90,6 @@ module.exports = {
       addBase({
         body: {
           "-webkit-font-smoothing": "subpixel-antialiased",
-        },
-      });
-      require("tailwind-heropatterns")({
-        // as per tailwind docs you can pass variants
-        variants: [],
-
-        // the list of patterns you want to generate a class for
-        // the names must be in kebab-case
-        // an empty array will generate all 87 patterns
-        patterns: [],
-
-        // The foreground colors of the pattern
-        colors: {
-          default: "#343a40",
-          "blue-dark": "#000044", //also works with rgb(0,0,205)
-        },
-
-        // The foreground opacity
-        opacity: {
-          default: "1.0",
-          100: "1.0",
         },
       });
       /**

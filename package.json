@@ -11,7 +11,7 @@
     "url": "https://github.com/Thomashighbaugh/resume/issues"
   },
   "license": "MIT",
-  "author": "Thomas Leon Highbaugh <thighbaugh@zoho.com>",
+  "author": "Thomas Leon Highbaugh <me@thomasleonhighbaugh.me>",
   "scripts": {
     "serve": "concurrently \"postcss ./tailwind.css -o docs/build.css --watch\"  \"live-server ./docs \"",
     "build": "cross-env NODE_ENV=build postcss ./tailwind.css -o ./docs/build.css"

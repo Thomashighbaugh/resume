@@ -2,10 +2,10 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  content:[
-"**/*.html",
-    "**/*.css"
-],
+  content: [
+    "./docs/**/*.html",
+    "./tailwind.css"
+  ],
   theme: {
     /* For Letter size */
     screens: {
@@ -15,6 +15,8 @@ module.exports = {
       md: "833px",
       lg: "1079.5px",
       xl: "1280px",
+      "2xl": "1440px", // 2K screens (1440p)
+      "4xl": "2160px", // 4K screens (4K UHD)
     },
     extend: {
       fontFamily: {
@@ -43,6 +45,22 @@ module.exports = {
         letter: "86.9375rem",
         "letter-col": "71.625rem",
         "letter-col-full": "77.9375rem",
+        "screen-75": "75vh",
+        "screen-80": "80vh",
+        "screen-90": "90vh",
+        "screen-95": "95vh",
+      },
+      minHeight: {
+        "screen-50": "50vh",
+        "screen-75": "75vh",
+        "screen-80": "80vh",
+        "screen-90": "90vh",
+      },
+      maxHeight: {
+        "screen-75": "75vh",
+        "screen-80": "80vh",
+        "screen-90": "90vh",
+        "screen-95": "95vh",
       },
       spacing: {
         0.5: "2px", // 2px

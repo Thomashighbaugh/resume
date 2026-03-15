@@ -24,6 +24,35 @@
     />
 
     <link href="./build.css" rel="stylesheet" />
+    <style>
+      @media print {
+        /* Force flexbox layout in print mode */
+        .print-flex {
+          display: flex !important;
+        }
+        .print-flex-col {
+          flex-direction: column !important;
+        }
+        .print-w-5-12 {
+          width: 41.666667% !important;
+          flex: none !important;
+        }
+        /* Prevent columns from breaking to new page */
+        .print-no-break {
+          break-inside: avoid !important;
+          page-break-inside: avoid !important;
+        }
+        /* Compact initials block for print */
+        .initials-container {
+          padding-top: 0.5rem !important;
+          padding-bottom: 0.5rem !important;
+        }
+        /* Remove all bottom borders in experience section for print */
+        .print-no-bottom-border {
+          border-bottom: none !important;
+        }
+      }
+    </style>
     <title>Thomas Leon Highbaugh — Resume</title>
   </head>
 <!-- Body ----------------------------------------------------------------------- -->
@@ -31,33 +60,33 @@
     <main class="font-jost hyphens-manual">
       <!-- Page -------------------------------------------------------------------------------------------------------->
       <section
-        class="p-3 my-auto mx-auto max-w-3xl bg-gray-100 rounded-2xl border-4 border-gray-700 sm:p-9 md:p-16 lg:mt-6 2xl:max-w-none 2xl:w-2/5 2xl:h-screen-95 2xl:p-16 2xl:text-xl 4xl:w-2/5 4xl:h-screen-95 4xl:p-20 4xl:text-xl print:border-0 page print:max-w-letter print:max-h-letter print:mx-0 print:my-o xsm:p-8 print:bg-white md:max-w-letter md:h-letter lg:h-letter"
+        class="p-3 my-auto mx-auto max-w-3xl bg-gray-100 rounded-2xl border-4 border-gray-700 sm:p-9 md:p-16 lg:mt-6 2xl:max-w-none 2xl:w-2/5 2xl:h-screen-95 2xl:p-16 2xl:text-xl 4xl:w-2/5 4xl:h-screen-95 4xl:p-20 4xl:text-xl print:border-0 page print:max-w-letter print:max-h-letter print:mx-0 print:my-0 print:p-2 xsm:p-8 print:bg-white print:text-sm md:max-w-letter md:h-letter lg:h-letter"
       >
         <!-- Name ---------------------------------------------------------------------------------------------------->
         <header
-          class="inline-flex justify-between items-baseline  w-full align-top border-b-4 pb-2 border-gray-300 2xl: 4xl:"
+          class="inline-flex justify-between items-baseline  w-full align-top border-b-4 pb-2 border-gray-300 2xl: 4xl: print:pb-1 print:mb-1"
         >
           <section class="block">
-            <h1 class=" text-5xl font-bold text-gray-600 2xl:text-6xl 4xl:text-7xl">
+            <h1 class=" text-5xl font-bold text-gray-600 2xl:text-6xl 4xl:text-7xl print:text-2xl print:leading-tight print:mb-0">
               Thomas Leon Highbaugh
             </h1>
             <!--Job Title--------------------------------------------------------------------------------------------------------->
             <h2
-              class="m-0 ml-2 mt-2 text-xl font-semibold text-gray-600 leading-snugish 2xl:text-2xl 2xl:ml-3 4xl:text-3xl 4xl:ml-4"
+              class="m-0 ml-2 mt-2 text-xl font-semibold text-gray-600 leading-snugish 2xl:text-2xl 2xl:ml-3 4xl:text-3xl 4xl:ml-4 print:text-sm print:ml-1 print:mt-0 print:mb-0 print:leading-tight"
             >
               LLM Engineer | Software Engineer | Systems Architect 
             </h2>
             <!--Location --------------------------------------------------------------------------------------------------------->
 
             <h3
-              class="m-0 mt-0 ml-2 text-xl font-medium text-gray-600 leading-snugish 2xl:text-xl 2xl:ml-3 2xl:mt-3 4xl:text-2xl 4xl:ml-4 4xl:mt-4"
+              class="m-0 mt-0 ml-2 text-xl font-medium text-gray-600 leading-snugish 2xl:text-xl 2xl:ml-3 2xl:mt-3 4xl:text-2xl 4xl:ml-4 4xl:mt-4 print:text-sm print:ml-1 print:mt-0 print:mb-0 print:leading-tight"
             >
             Trenton, Florida
             </h3>
           </section>
           <!--   Initials Block         -->
           <section
-            class="justify-between px-3 mt-0   text-4xl font-black leading-none text-white bg-gray-600 rounded-md initials-container 2xl:px-4 2xl:text-5xl 2xl: 4xl:px-5 4xl:text-6xl 4xl: print:bg-black"
+            class="justify-between px-3 mt-0   text-4xl font-black leading-none text-white bg-gray-600 rounded-md initials-container 2xl:px-4 2xl:text-5xl 2xl: 4xl:px-5 4xl:text-6xl 4xl: print:bg-black print:text-xl print:px-1"
             style="padding-bottom: 1.5rem; padding-top: 1.5rem;"
           >
             <section class="text-center initial">T</section>
@@ -68,18 +97,18 @@
 
         <!-- Column -------------------------------------------------------------------------------------------------->
         <!-- Two explicit columns: 45% width each, h-100, pl-1 pr-1 -->
-        <div class="flex h-full justify-between">
+        <div class="flex h-full justify-between print-flex print:!justify-between">
           <!-- Column 1: Contact Info, Summary, Education, Skills -->
-          <div class="w-5/12 h-100 pl-1 pr-1">
-            <section class="flex-col">
+          <div class="w-5/12 h-100 pl-1 pr-1 print-w-5-12 print:h-auto print:pl-1 print:pr-1 print-no-break">
+            <section class="flex-col print-flex-col">
           <!-- Contact Information ------------------------------------------------------------------------------------->
-          <section class="pb-2 mt-4  first:mt-0 2xl:pb-2 2xl:mt-6 4xl:pb-2 4xl:mt-8">
+          <section class="pb-2 mt-4  first:mt-0 2xl:pb-2 2xl:mt-6 4xl:pb-2 4xl:mt-8 print:mt-2 print:pb-1">
             <!-- To keep in the same column -------------------------------------------------------------------------->
             <section class="break-inside-avoid">
               <section class="pb-2 border-b-4 border-gray-300 break-inside-avoid 2xl:pb-2 4xl:pb-2">
                 <ul class="pr-7 list-inside 2xl:pr-10 4xl:pr-12">
                   <li
-                    class="mt-1 leading-normal text-black text-gray-600 transition duration-100 ease-in hover:text-gray-700 text-md 2xl:text-xl 2xl:mt-2 4xl:text-xl 4xl:mt-3 print:"
+                    class="mt-1 leading-normal text-black text-gray-600 transition duration-100 ease-in hover:text-gray-700 text-md 2xl:text-xl 2xl:mt-2 4xl:text-xl 4xl:mt-3 print:text-sm print:mt-0"
                   >
                     <a href="https://thomasleonhighbaugh.me" class="group">
                       <span
@@ -96,7 +125,7 @@
                     </a>
                   </li>
                   <li
-                    class="mt-1 leading-normal text-gray-600 transition duration-100 ease-in hover:text-gray-700 text-md 2xl:text-xl 2xl:mt-2 4xl:text-xl 4xl:mt-3"
+                    class="mt-1 leading-normal text-gray-600 transition duration-100 ease-in hover:text-gray-700 text-md 2xl:text-xl 2xl:mt-2 4xl:text-xl 4xl:mt-3 print:text-sm print:mt-0"
                   >
                     <a href="https://github.com/Thomashighbaugh" class="group">
                       <span
@@ -114,7 +143,7 @@
                   </li>
 
                   <li
-                    class="mt-1 leading-normal text-gray-600 transition duration-100 ease-in hover:text-gray-700 text-md 2xl:text-xl 2xl:mt-2 4xl:text-xl 4xl:mt-3"
+                    class="mt-1 leading-normal text-gray-600 transition duration-100 ease-in hover:text-gray-700 text-md 2xl:text-xl 2xl:mt-2 4xl:text-xl 4xl:mt-3 print:text-sm print:mt-0"
                   >
                     <a href="mailto:me@thomasleonhighbaugh.me" class="group">
                       <span
@@ -131,7 +160,7 @@ me@thomasleonhighbaugh.me
                     </a>
                   </li>
                   <li
-                    class="mt-1 leading-normal text-gray-600 transition duration-100 ease-in hover:text-gray-700 text-md 2xl:text-xl 2xl:mt-2 4xl:text-xl 4xl:mt-3"
+                    class="mt-1 leading-normal text-gray-600 transition duration-100 ease-in hover:text-gray-700 text-md 2xl:text-xl 2xl:mt-2 4xl:text-xl 4xl:mt-3 print:text-sm print:mt-0"
                   >
                     <a href="tel:+15109070654">
                       <span
@@ -147,35 +176,35 @@ me@thomasleonhighbaugh.me
             </section>
           </section>
           <!--Summary ---------------------------------------------------------------------------------------------------------->
-          <section class="pb-2 pb-2 mt-0 border-b-4 border-gray-300 first:mt-0 2xl:pb-2 2xl:mt-1 4xl:pb-2 4xl:mt-2">
+          <section class="pb-2 pb-2 mt-0 border-b-4 border-gray-300 first:mt-0 2xl:pb-2 2xl:mt-1 4xl:pb-2 4xl:mt-2 print:mt-0 print:pb-1">
             <!-- To keep in the same column -->
             <section class="break-inside-avoid">
               <h2
-                class=" text-xl font-bold tracking-widest text-gray-600 2xl:text-2xl 2xl: 4xl:text-3xl 4xl: print:font-normal pt-0 mt-0 2xl:pt-0 2xl:mt-0 4xl:pt-0 4xl:mt-0"
+                 class=" text-xl font-bold tracking-widest text-gray-600 2xl:text-2xl 2xl: 4xl:text-3xl 4xl: print:font-normal print:text-lg pt-0 mt-0 2xl:pt-0 2xl:mt-0 4xl:pt-0 4xl:mt-0"
               >
                 SUMMARY
               </h2>
 
               <section class=" break-inside-avoid">
-                <p class="leading-normal text-gray-700 text-md 2xl:text-xl 4xl:text-xl">
+                <p class="leading-normal text-gray-700 text-md 2xl:text-xl 4xl:text-xl print:text-sm">
                Cutting-edge AI Engineer specializing in Large Language Model development, prompt engineering, and multi-agent system architectures. Expert in implementing RAG pipelines, fine-tuning transformer models, and deploying production-scale LLM applications. Proven track record in building intelligent automation systems that leverage advanced AI capabilities to solve complex business challenges.
                 </p>
               </section>
             </section>
           </section>
 <!--Education -------------------------------------------------------------------------------------------------------->
-<section class="pb-2 mt-2 border-b-4 border-gray-300 first:mt-0 break-inside-avoid 2xl:pb-2 2xl:mt-6 4xl:pb-2 4xl:mt-8">
+<section class="pb-2 mt-2 border-b-4 border-gray-300 first:mt-0 break-inside-avoid 2xl:pb-2 2xl:mt-6 4xl:pb-2 4xl:mt-8 print:mt-1 print:pb-1">
     <!-- To keep in the same column -->
     <section class="break-inside-avoid pt-2 pb-2 2xl:pt-3 2xl:pb-3 4xl:pt-4 4xl:pb-4">
       <h2
-        class="text-xl font-bold tracking-widest text-gray-600 2xl:text-2xl 4xl:text-3xl print:font-normal">
+        class="text-xl font-bold tracking-widest text-gray-600 2xl:text-2xl 4xl:text-3xl print:font-normal print:text-lg">
         EDUCATION
       </h2>
         <!-- school --------------------------------------------------------------------------->
         <section class="mt-2 border-b-2 break-inside-avoid 2xl:mt-4 4xl:mt-6">
             <header>
                 <h3
-                    class="text-lg font-semibold text-gray-600 leading-snugish 2xl:text-xl 4xl:text-2xl"
+                    class="text-lg font-semibold text-gray-600 leading-snugish 2xl:text-xl 4xl:text-2xl print:text-base"
                 >
                     California State University East Bay
                 </h3>
@@ -270,34 +299,34 @@ me@thomasleonhighbaugh.me
 </section>
 
             <!--Begin Skills ----------------------------------------------------------------------------------------------------->
-            <section class="pb-2 border-b-4 border-gray-300 first:mt-0 break-inside-avoid 2xl:pb-2 2xl: 4xl:pb-2 4xl:">
+            <section class="pb-2 border-b-4 border-gray-300 first:mt-0 break-inside-avoid 2xl:pb-2 2xl: 4xl:pb-2 4xl: print:mt-1 print:pb-1">
               <!-- To keep in the same column -->
               <section class="break-inside-avoid pt-2 pb-2 2xl:pt-3 2xl:pb-3 4xl:pt-4 4xl:pb-4">
                 <h2
-                  class="text-xl font-bold tracking-widest text-gray-600 2xl:text-2xl 4xl:text-3xl print:font-normal"
+                  class="text-xl font-bold tracking-widest text-gray-600 2xl:text-2xl 4xl:text-3xl print:font-normal print:text-lg"
                 >
                   SKILLS
                 </h2>
                 <section class="break-inside-avoid">
                   <ul class="flex flex-wrap font-bold leading-relaxed text-md -mr-1.6 2xl:text-xl 2xl:-mr-2 4xl:text-xl 4xl:-mr-3">
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">LangChain</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">RAG</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">Agentic AI</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">AutoGen</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">Swarm Engineering</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">OpenAI API</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">Prompt Engineering</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">LLM Fine-tuning</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">Vector Databases</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">Multi-Agent Systems</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">Python</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">FastAPI</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">React</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">TypeScript</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">NixOS</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">PostgreSQL</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">AWS</li>
-        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset">Docker</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">LangChain</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">RAG</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">Agentic AI</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">AutoGen</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">Swarm Engineering</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">OpenAI API</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">Prompt Engineering</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">LLM Fine-tuning</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">Vector Databases</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">Multi-Agent Systems</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">Python</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">FastAPI</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">React</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">TypeScript</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">NixOS</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">PostgreSQL</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">AWS</li>
+        <li class="my-1 mx-2 p-2 leading-relaxed text-white bg-gray-600 rounded-md mr-1.6 2xl:my-1 mx-2 2xl:p-2 2xl:mr-2 4xl:m-3 4xl:p-3 4xl:mr-3 print:bg-white print:border-inset print:text-xs print:m-1 print:p-1">Docker</li>
      </ul>
                 </section>
               </section>
@@ -305,26 +334,26 @@ me@thomasleonhighbaugh.me
           </div>
           
           <!-- Column 2: Experience -->
-           <div class="w-5/12 h-100 pr-1">
+           <div class="w-5/12 h-100 pr-1 print-w-5-12 print:h-auto print:pr-1 print-no-break">
 
 <!--Experience ------------------------------------------------------------------------------------------------------>
-<section class="pb-2 pb-2 mt-4 border-b-4 border-gray-300 first:mt-0 2xl:pb-2 2xl:mt-6 4xl:pb-2 4xl:mt-8">
+<section class="pb-2 pb-2 mt-4 border-b-4 border-gray-300 first:mt-0 2xl:pb-2 2xl:mt-6 4xl:pb-2 4xl:mt-8 print:mt-2 print:pb-1 print-no-bottom-border">
     <!-- To keep in the same column ------------------------------------------------------------------------->
     <section class="break-inside-avoid">
-        <h2 class="mt-2 text-xl font-black tracking-widest text-gray-600 2xl:text-2xl 2xl: 4xl:text-3xl 4xl: print:font-normal">
+        <h2 class="mt-2 text-xl font-black tracking-widest text-gray-600 2xl:text-2xl 2xl: 4xl:text-3xl 4xl: print:font-normal print:text-lg print:mt-0 print:mb-0">
             EXPERIENCE
         </h2>
         <!--Job 1-->
-        <section class=" border-b-2 border-gray-300 break-inside-avoid 2xl: 4xl:">
+         <section class=" border-b-2 border-gray-300 break-inside-avoid 2xl: 4xl: print:mb-1 print-no-bottom-border">
             <header>
-                <h3 class="font-semibold text-gray-600 text-md leading-snugish 2xl:text-xl 4xl:text-xl">
+                <h3 class="font-semibold text-gray-600 text-md leading-snugish 2xl:text-xl 4xl:text-xl print:text-sm print:leading-none">
                     AI Engineer & LLM Specialist
                 </h3>
-                <p class="text-sm leading-normal text-gray-600 2xl:text-base 4xl:text-lg">
+                <p class="text-sm leading-normal text-gray-600 2xl:text-base 4xl:text-lg print:text-xs print:leading-none">
                     Jan 2023 &ndash; Present | Self-Employed
                 </p>
             </header>
-            <ul class="pl-3 mt-1 font-normal text-gray-700 text-md leading-snugish 2xl:pl-4 2xl:mt-2 2xl:text-xl 4xl:pl-5 4xl:mt-3 4xl:text-xl">
+            <ul class="pl-3 font-normal text-gray-700 text-md leading-snugish 2xl:pl-4 2xl:text-xl 4xl:pl-5 4xl:text-xl print:text-xs print:leading-none print:pl-2 print:my-0">
                 <li>
                     <span class="text-gray-600 transform -translate-y-px select-none">
                         &rsaquo;
@@ -346,16 +375,16 @@ me@thomasleonhighbaugh.me
             </ul>
         </section>
         <!--Job 2-->
-        <section class=" border-b-2 border-gray-300 break-inside-avoid 2xl: 4xl:">
+         <section class=" border-b-2 border-gray-300 break-inside-avoid 2xl: 4xl: print:mb-1 print-no-bottom-border">
             <header>
-                <h3 class="font-semibold text-gray-600 text-md leading-snugish 2xl:text-xl 4xl:text-xl">
+                <h3 class="font-semibold text-gray-600 text-md leading-snugish 2xl:text-xl 4xl:text-xl print:text-sm print:leading-none">
                     Full Stack Web Developer
                 </h3>
-                <p class="text-sm leading-normal text-gray-600 2xl:text-base 4xl:text-lg">
+                <p class="text-sm leading-normal text-gray-600 2xl:text-base 4xl:text-lg print:text-xs print:leading-none">
                     Mar 2020 &ndash; Dec 2022 | Self-Employed
                 </p>
             </header>
-            <ul class="pl-3 mt-1 font-normal text-gray-700 text-md leading-snugish 2xl:pl-4 2xl:mt-2 2xl:text-xl 4xl:pl-5 4xl:mt-3 4xl:text-xl">
+            <ul class="pl-3 font-normal text-gray-700 text-md leading-snugish 2xl:pl-4 2xl:text-xl 4xl:pl-5 4xl:text-xl print:text-xs print:leading-none print:pl-2 print:my-0">
                 <li>
                     <span class="text-gray-600 transform -translate-y-px select-none">
                         &rsaquo;
@@ -379,14 +408,14 @@ me@thomasleonhighbaugh.me
         <!-- job 3  -->
         <section class=" border-b-2 border-gray-300 break-inside-avoid">
             <header>
-                <h3 class="font-semibold text-gray-600 text-md leading-snugish 2xl:text-xl 4xl:text-xl">
+                <h3 class="font-semibold text-gray-600 text-md leading-snugish 2xl:text-xl 4xl:text-xl print:text-sm print:leading-none">
                     Computer Repair Technician
                 </h3>
-                <p class="text-sm leading-normal text-gray-600 2xl:text-base 4xl:text-lg">
+                <p class="text-sm leading-normal text-gray-600 2xl:text-base 4xl:text-lg print:text-xs print:leading-none">
                     Mar 2018 &ndash; Present | Freelance
                 </p>
             </header>
-            <ul class="pl-3 mt-1 font-normal text-gray-700 text-md leading-snugish 2xl:pl-4 2xl:mt-2 2xl:text-xl 4xl:pl-5 4xl:mt-3 4xl:text-xl">
+            <ul class="pl-3 font-normal text-gray-700 text-md leading-snugish 2xl:pl-4 2xl:text-xl 4xl:pl-5 4xl:text-xl print:text-xs print:leading-none print:pl-2 print:my-0">
                 <li>
                     <span class="text-gray-600 transform -translate-y-px select-none">
                         &rsaquo;
@@ -404,14 +433,14 @@ me@thomasleonhighbaugh.me
         <!-- job 3 -->
         <section class=" border-b-2 border-gray-300 break-inside-avoid">
             <header>
-                <h3 class="font-semibold text-gray-600 text-md leading-snugish 2xl:text-xl 4xl:text-xl">
+                <h3 class="font-semibold text-gray-600 text-md leading-snugish 2xl:text-xl 4xl:text-xl print:text-sm print:leading-none">
                     Assistant Manager
                 </h3>
-                <p class="text-sm leading-normal text-gray-600 2xl:text-base 4xl:text-lg">
+                <p class="text-sm leading-normal text-gray-600 2xl:text-base 4xl:text-lg print:text-xs print:leading-none">
                     May 2012 &ndash; Apr 2018 | Pet Food Express
                 </p>
             </header>
-            <ul class="pl-3 mt-1 font-normal text-gray-700 text-md leading-snugish 2xl:pl-4 2xl:mt-2 2xl:text-xl 4xl:pl-5 4xl:mt-3 4xl:text-xl">
+            <ul class="pl-3 font-normal text-gray-700 text-md leading-snugish 2xl:pl-4 2xl:text-xl 4xl:pl-5 4xl:text-xl print:text-xs print:leading-none print:pl-2 print:my-0">
                 <li>
                     <span class="text-gray-600 transform -translate-y-px select-none">
                         &rsaquo;
@@ -435,14 +464,14 @@ me@thomasleonhighbaugh.me
         <!-- job 4 -->
         <section class=" border-b-0 border-gray-300 break-inside-avoid">
             <header>
-                <h3 class="font-semibold text-gray-600 text-md leading-snugish 2xl:text-xl 4xl:text-xl">
+                <h3 class="font-semibold text-gray-600 text-md leading-snugish 2xl:text-xl 4xl:text-xl print:text-sm print:leading-none">
                     Executive Assistant
                 </h3>
-                <p class="text-sm leading-normal text-gray-600 2xl:text-base 4xl:text-lg">
+                <p class="text-sm leading-normal text-gray-600 2xl:text-base 4xl:text-lg print:text-xs print:leading-none">
                     Jun 2009 &ndash; Dec 2011 | 360 Custom Closets and Cabinets
                 </p>
             </header>
-            <ul class="pl-3 mt-1 font-normal text-gray-700 text-md leading-snugish 2xl:pl-4 2xl:mt-2 2xl:text-xl 4xl:pl-5 4xl:mt-3 4xl:text-xl">
+            <ul class="pl-3 font-normal text-gray-700 text-md leading-snugish 2xl:pl-4 2xl:text-xl 4xl:pl-5 4xl:text-xl print:text-xs print:leading-none print:pl-2 print:my-0">
                 <li>
                     <span class="text-gray-600 transform -translate-y-px select-none">
                         &rsaquo;
